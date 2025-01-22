@@ -1,0 +1,175 @@
+/* Global Styles */
+body {
+    font-family: 'DM Sans', serif;
+    margin: 0;
+    padding: 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    overflow: hidden;
+}
+    
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Behind other content */
+    animation: fadeSlideshow 60s infinite;
+    background-size: cover;
+    background-position: center -100px;
+}
+
+/* Container Styles */
+.container {
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.3); /* Translucent box */
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    position: relative;
+    border: 1px solid rgba(0, 153, 255, 0.5); /* Subtle blue border */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 153, 255, 0.3); /* Glow effect */
+    animation: fadeIn 1s ease-in-out;
+    }
+    
+h1, .weather-info p, .weather-info h2 {
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Adds depth to text */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 28px;
+    color: #00aaff;
+    margin-bottom: 20px;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.search-bar .icon {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 5px;
+}
+
+/* Button Styles */
+button {
+    background-color: #08af02;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #03dd0a;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+    font-style: italic;
+}
+
+/* Weather Info Section */
+.weather-info {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info p, .weather-info h2 {
+    margin: 10px 0;
+    color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeSlideshow {
+    0%, 15% { background-image: url('images/joel-neff-yYoA1ZcRgjY-unsplash.jpg'); opacity: 1; }
+    17%, 20% { opacity: 0; }
+
+    20%, 35% { background-image: url('images/mark-koch-KiRlN3jjVNU-unsplash.jpg'); opacity: 1; }
+    37%, 40% { opacity: 0; }
+
+    40%, 55% { background-image: url('images/jms-kFHz9Xh3PPU-unsplash.jpg'); opacity: 1; }
+    57%, 60% { opacity: 0; }
+
+    60%, 75% { background-image: url('images/damiano-baschiera-d4feocYfzAM-unsplash.jpg'); opacity: 1; }
+    77%, 80% { opacity: 0; }
+
+    80%, 95% { background-image: url('images/jezael-melgoza-alY6_OpdwRQ-unsplash.jpg'); opacity: 1; }
+    97%, 100% { opacity: 0; }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 10px; /* Reduce padding further for small screens */
+    }
+
+    h1 {
+        font-size: 20px; /* Smaller font for better spacing */
+    }
+
+    button {
+        padding: 8px 12px; /* Reduce button size */
+        font-size: 12px; /* Smaller font size */
+    }
+
+    .weather-info p, .weather-info h2 {
+        font-size: 14px; /* Reduce text size for smaller devices */
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
