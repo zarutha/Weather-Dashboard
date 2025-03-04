@@ -8,4 +8,4 @@ INSTRUCTIONS:
 4. Open in your default IDE (code . // if using VSCode)
 5. Add an API key to script.js and make sure to save changes (read NOTE*)
 
-NOTE*: A valid API key is needed for the code to function. You can sign up for a FREE api key at OpenWeatherMap, and once you get a key from signing up, replace line 1 in script.js, with your own key, (labelled clearly). Any recruiters or hiring managers for internships/job opportunities may feel free to request a key from me directly if not already given one in an application.
+NOTE*: A valid API key is needed for the code to function. You can sign up for a FREE api key at OpenWeatherMap, and once you get a key from signing up, replace line 1 in script.js, with your own key, (labelled clearly).
